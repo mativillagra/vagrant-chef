@@ -1,0 +1,37 @@
+1. sudo mkdir -p /var/www/example.com/public_html 
+
+2. sudo chown -R $USER:$USER /var/www/example.com/public_html 
+
+3. sudo chmod -R 755 /var/www 
+
+4. nano /var/www/example.com/public_html/index.html 
+
+<html>
+  <head>
+    <title>Welcome to Example.com!</title>
+  </head>
+  <body>
+    <h1>Success!  The example.com virtual host is working!</h1>
+  </body>
+</html>
+	
+
+5. Create the First Virtual Host File 
+
+nano /etc/apache2/sites-available/example.com.conf
+
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+
+6. sudo a2ensite example.com.conf
+
+
+Please check http://www.jasongrimes.org/2012/06/deploying-a-lamp-application-with-chef-vagrant-and-ec2-3-of-3/#config
