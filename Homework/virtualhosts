@@ -34,4 +34,9 @@ nano /etc/apache2/sites-available/example.com.conf
 6. sudo a2ensite example.com.conf
 
 
-Please check http://www.jasongrimes.org/2012/06/deploying-a-lamp-application-with-chef-vagrant-and-ec2-3-of-3/#config
+Please check 
+
+http://www.jasongrimes.org/2012/06/deploying-a-lamp-application-with-chef-vagrant-and-ec2-3-of-3/#config
+
+http://work.stevegrossi.com/2014/07/06/provisioning-a-lamp-stack-and-wordpress-with-chef-part-2/
+
