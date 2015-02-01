@@ -6,6 +6,14 @@ This space is used to learn to write chef cookbooks using chef solo on a virtual
 
 Provide code examples and explanations of how to get the project.
 
+1. Virtualbox Version: 4.3.20-96996~Debian~wheezy
+
+2. Guest Additions Version: 4.2.0
+
+3. vagrant --version 1.7.2
+
+4. Chef solo
+
 # Notes
 
 Chef uses Erubis as its template language. It allows embedding pure Ruby code inside special symbols inside your templates.
