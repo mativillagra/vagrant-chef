@@ -12,7 +12,7 @@ Provide code examples and explanations of how to get the project.
 
 3. vagrant --version 1.7.2
 
-4. Chef solo
+4. Chef solo 12.0.3
 
 # Notes
 
@@ -35,10 +35,20 @@ but in rare cases it can prevent things such as shared folders from working prop
 shared folder errors, please make sure the guest additions within the virtual machine match the
 version of VirtualBox you have installed on your host and reload your VM.
 
+Solution: From your project directory : rm .vagrant/machines/default/virtualbox/synced_folders 
+
+vagrant reload --provision 
+
+https://github.com/mitchellh/vagrant/issues/5199 
+
+
 #Plugin Used 
 
 $ vagrant plugin list
 
 vagrant-aws (0.6.0)
 vagrant-share (1.1.3, system)
+
+
+
 
