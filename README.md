@@ -37,25 +37,8 @@ version of VirtualBox you have installed on your host and reload your VM.
 
 #Plugin Used 
 
-$vagrant plugin list
-vagrant-aws (0.4.0)
-vagrant-share (1.1.3, system)
-
-$vagrant plugin update vagrant-share
-Updating plugins: vagrant-share. This may take a few minutes...
-Updated 'vagrant-aws' to version '0.6.0'!
-
 $ vagrant plugin list
+
 vagrant-aws (0.6.0)
 vagrant-share (1.1.3, system)
-$vagrant plugin list
-vagrant-aws (0.4.0)
-vagrant-share (1.1.3, system)
 
-$vagrant plugin update vagrant-share
-Updating plugins: vagrant-share. This may take a few minutes...
-Updated 'vagrant-aws' to version '0.6.0'!
-
-$ vagrant plugin list
-vagrant-aws (0.6.0)
-vagrant-share (1.1.3, system)
