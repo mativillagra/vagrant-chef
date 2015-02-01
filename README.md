@@ -17,6 +17,12 @@ You use <%- %> if you want to embed Ruby logic into your template file. We used 
 When you use the template resource, Chef makes all the variables you pass in available as instance variables 
 when rendering the template. We used @hi , @world , and @from in our earlier example.
 
+#Issues 
 
+Guest Additions Version: 4.2.0
+VirtualBox Version: 4.3
 
-
+The guest additions on this VM do not match the installed version of VirtualBox! In most cases this is fine,
+but in rare cases it can prevent things such as shared folders from working properly. If you see 
+shared folder errors, please make sure the guest additions within the virtual machine match the
+version of VirtualBox you have installed on your host and reload your VM.
