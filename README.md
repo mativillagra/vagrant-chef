@@ -34,3 +34,28 @@ The guest additions on this VM do not match the installed version of VirtualBox!
 but in rare cases it can prevent things such as shared folders from working properly. If you see 
 shared folder errors, please make sure the guest additions within the virtual machine match the
 version of VirtualBox you have installed on your host and reload your VM.
+
+#Plugin Used 
+
+$vagrant plugin list
+vagrant-aws (0.4.0)
+vagrant-share (1.1.3, system)
+
+$vagrant plugin update vagrant-share
+Updating plugins: vagrant-share. This may take a few minutes...
+Updated 'vagrant-aws' to version '0.6.0'!
+
+$ vagrant plugin list
+vagrant-aws (0.6.0)
+vagrant-share (1.1.3, system)
+$vagrant plugin list
+vagrant-aws (0.4.0)
+vagrant-share (1.1.3, system)
+
+$vagrant plugin update vagrant-share
+Updating plugins: vagrant-share. This may take a few minutes...
+Updated 'vagrant-aws' to version '0.6.0'!
+
+$ vagrant plugin list
+vagrant-aws (0.6.0)
+vagrant-share (1.1.3, system)
