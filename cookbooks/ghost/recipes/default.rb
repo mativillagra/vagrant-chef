@@ -42,7 +42,7 @@ remote_file "#{node[:ghost][:dir]}/GHOST.c" do
 end
 
 bash "run_program" do
-  user "debian"
+  user node[:ghost][:user]
   cwd  node[:ghost][:dir]
   code <<-EOH
      gcc -o GHOST GHOST.c
