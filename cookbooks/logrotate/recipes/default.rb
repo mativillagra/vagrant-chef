@@ -23,11 +23,3 @@ else
 
 end
 
-
-template "/etc/logrotate.d/logrotate.conf" do
-  source "logrotate.conf.erb"
-  variables(
-    how_often: "daily",
-    keep: "31"
-  )
-end
