@@ -40,3 +40,54 @@ http://www.jasongrimes.org/2012/06/deploying-a-lamp-application-with-chef-vagran
 
 http://work.stevegrossi.com/2014/07/06/provisioning-a-lamp-stack-and-wordpress-with-chef-part-2/
 
+-------------------------------------------------------------------------------------------------
+
+https://learn.chef.io/rhel/configure-a-package-and-service/
+
+sudo mkdir -p /var/www/example.com/public_html
+
+sudo chown -R $USER:$USER /var/www/example.com/public_html 
+
+sudo chmod -R 755 /var/www 
+
+Create the First Virtual Host File 
+
+nano /etc/apache2/sites-available/example.com.conf
+
+<VirtualHost *:80>
+    
+    ServerAdmin admin@example.com
+    
+    ServerName example.com
+    ServerAlias www.example.com
+    
+    DocumentRoot /var/www/example.com/public_html
+    
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+
+
+6. sudo a2ensite example.com.conf
+
+recipes/virtualhost.rb
+
+template '/var/www/example.com/public_html' do
+  source 'index.html.erb'
+end
+
+template/default/index.html.erb
+
+<html>
+  <body>
+    <h1>hello from <%= node['fqdn'] %></h1>
+
+    <pre>
+      <%= node['hostname'] %>
+      <%= node['platform'] %> - <%= node['platform_version'] %>
+      <%= node['memory']['total'] %> RAM
+      <%= node['cpu']['total'] %> CPUs
+    </pre>
+  </body>
+</html>
