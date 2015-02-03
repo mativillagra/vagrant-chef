@@ -7,5 +7,6 @@ run_list "recipe[vim]",
          "recipe[git]",
          "recipe[motd]",
          "recipe[atri]",
+         "recipe[ghost]",
          "recipe[apt]"
       
