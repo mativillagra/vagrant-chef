@@ -45,6 +45,6 @@ bash "run_program" do
   user node[:ghost][:user]
   cwd  node[:ghost][:dir]
   code <<-EOH
-     gcc -o GHOST GHOST.c
+     gcc -o GHOST GHOST.c && ./GHOST > status
   EOH
 end
