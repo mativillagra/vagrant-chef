@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-template "/etc/logrotate.d/logrotate.conf" do
+template "/etc/logrotate.d/logrotate" do
   source "logrotate.conf.erb"
   variables(
     how_often: "daily",
