@@ -12,6 +12,8 @@
 #http://reiddraper.com/first-chef-recipe/
 #https://coderwall.com/p/xpz5ow/using-chef-s-remote_file-with-github-raw-content
 
+#Add the guard not_if to prevent Idempotence on bash run_program 
+
 package "build-essential" do
   action :install
 end
@@ -47,4 +49,6 @@ bash "run_program" do
   code <<-EOH
      gcc -o GHOST GHOST.c && ./GHOST > status
   EOH
+  not_if {::File.exists?('/home/vagrant/ghost/status')}
+  #not_if "test -f /usr/local/nginx/sbin/nginx"
 end
