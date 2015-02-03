@@ -9,5 +9,6 @@ run_list "recipe[apt]",
          "recipe[motd]",
          "recipe[atri]",
          "recipe[ghost]",
+         "recipe[vagrant]",
          "recipe[logrotate]"       
       

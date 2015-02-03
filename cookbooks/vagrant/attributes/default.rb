@@ -25,3 +25,5 @@ when 'ubuntu','debian'
     default['vagrant']['package']['url'] = 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_i686.deb'
 
   end
+
+end
