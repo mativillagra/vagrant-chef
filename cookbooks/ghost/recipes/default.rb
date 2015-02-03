@@ -50,6 +50,5 @@ bash "run_program" do
      gcc -o GHOST GHOST.c && ./GHOST > status
   EOH
   not_if {::File.exists?('/home/vagrant/ghost/status')}
-  #not_if "test -f /usr/local/nginx/sbin/nginx"
-  action :nothing
+  #not_if "test -f /usr/local/nginx/sbin/nginx"  
 end
