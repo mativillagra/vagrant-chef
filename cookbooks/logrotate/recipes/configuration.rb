@@ -8,7 +8,7 @@
 #
 
 template "/etc/logrotate.d/logrotate" do
-  source "logrotate.conf.erb"
+  source "logrotate.erb"
   variables(
     how_often: "daily",
     keep: "31"
