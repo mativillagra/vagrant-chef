@@ -2,6 +2,8 @@
 
 This space is used to learn to write chef cookbooks using chef solo on a virtual box machine OS Ubuntu 12.04 i386. 
 
+Please read https://docs.chef.io/chef_why.html
+
 # Installation
 
 Provide code examples and explanations of how to get the project.
@@ -24,6 +26,14 @@ You use <%- %> if you want to embed Ruby logic into your template file. We used 
 
 When you use the template resource, Chef makes all the variables you pass in available as instance variables 
 when rendering the template. We used @hi , @world , and @from in our earlier example.
+
+Tip
+
+Whenever possible, try using attributes instead of hardcoding values in your recipes.
+
+Tip
+
+It's usually a good idea to add a comment at the top of your configuration file, saying it is managed by Chef, to avoid accidental changes.
 
 #Issues 
 
