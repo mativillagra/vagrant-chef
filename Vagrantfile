@@ -30,6 +30,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # your network.
   config.vm.network "public_network", bridge: 'eth0'
 
+  if Vagrant.has_plugin?("vagrant-proxyconf")
+   config.proxy.http     = "http://proxy-us.intel.com:911/"
+   config.proxy.https    = "http://proxy-us.intel.com:912/"
+   config.proxy.no_proxy = "localhost,127.0.0.1,asdc.lab,intel.com,10.218.0.0/16"
+  end 
+
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
   # config.ssh.forward_agent = true
