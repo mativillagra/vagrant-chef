@@ -8,5 +8,5 @@
 #
 
 file "#{ENV['HOME']}/motd.txt" do
-     content 'Written in stone'
+     content 'Written in stone__'
 end
