@@ -1,8 +1,0 @@
-#Cookbook_file section same as before
-
-package 'glusterfs_3.2.1-1_amd64.deb' do
-	provider Chef::Provider::Package::Dpkg
-	source "/var/chef-package-cache/glusterfs_3.2.1-1_amd64.deb"
-	action :install
-	not_if "test -f /usr/local/nginx/sbin/nginx"
-end
